@@ -1,0 +1,30 @@
+{
+    "os": "linux",
+    "distribution": "ubuntu",
+    "homepage": "https://ubuntu.com/",
+
+    "mirrors": [
+        "https://releases.ubuntu.com",
+        "http://ftp.ntua.gr/pub/linux/ubuntu-releases"
+    ],
+
+    "versions": {
+        "20.04": {
+            "variants": ["desktop", "live-server"],
+            "platforms": ["amd64"]
+        }
+    },
+
+    "files": {
+        "iso":{ 
+            "url": "${mirror}/${version}/ubuntu-${version}-${variant}-${platform}.iso"
+        },
+        "bittorent": {
+            "url": "${iso.url}.torrent"
+        },
+        "zsync": {
+            "url": "${iso.url}.zsync"
+        }
+    }
+
+}
